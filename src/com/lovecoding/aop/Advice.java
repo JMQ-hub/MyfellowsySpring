@@ -13,7 +13,7 @@ public class Advice {
     public void afterRunning(){
         System.out.println("后置通知，在目标方法执行后执行");
     }
-    @Th
+
     public void throwing(){
         System.out.println("异常通知，在目标方法发生异常时执行");
     }
