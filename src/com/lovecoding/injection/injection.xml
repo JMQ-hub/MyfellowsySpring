@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+    <!--
+    1.set方法注入
+    -->
+    <bean name = "person1" class = "com.lovecoding.bean.Person">
+    <property name="ID" value="23232323"></property>
+    <property name="name" value="坤坤"></property>
+    <property name="sex" value="男"></property>
+    <property name="car" ref="car"></property>
+
+    </bean>
+    <bean name ="car" class="com.lovecoding.bean.Car">
+        <property name="name" value=" 宝马"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
+    <!--
+    2.构造方法注入
+    -->
+    <bean name = "person2" class ="com.lovecoding.bean.Person">
+        <constructor-arg name = "name" value="小红" ></constructor-arg>
+        <constructor-arg name="ID" value="25665754332"></constructor-arg>
+        <property name="sex" value="女"></property>
+        <property name="car" ref="car"></property>
+    </bean>
+
+    <bean>
+
+    </bean>
+
+
+
+</beans>
