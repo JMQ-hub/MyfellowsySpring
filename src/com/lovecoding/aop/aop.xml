@@ -11,7 +11,7 @@
     <bean id = "AddCommodity" class="com.lovecoding.aop.impl.AddCommodity"></bean>
 
 <!--execution ( public void com.lovecoding.aop.impl.AddCommodity.*(..)-->
-    <aop:config>
+    <!--<aop:config>
         <aop:pointcut id="pc" expression="execution ( * com.lovecoding.aop.impl.AddCommodity.*(..))"/>
         <aop:aspect ref="Advice">
             <aop:before pointcut-ref="pc" method="before"></aop:before>
@@ -20,7 +20,7 @@
             <aop:after-throwing method="throwing" pointcut-ref="pc"></aop:after-throwing>
             <aop:after-returning method="finalAfter" pointcut-ref="pc"></aop:after-returning>
         </aop:aspect>
-    </aop:config>
+    </aop:config>-->
 <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 

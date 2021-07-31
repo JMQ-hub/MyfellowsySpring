@@ -1,15 +1,19 @@
 package com.lovecoding.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.junit.After;
-import org.junit.Before;
+import org.aspectj.lang.annotation.*;
 
+@Aspect
 public class Advice {
-    @Before
+    @Pointcut("execution(* com.lovecoding.aop.impl.AddCommodity.*(..))")
+    public void pc(){}
+
+    @Before("Advice.pc()")
     public void before(){
         System.out.println("前置通知，在目标方法执行前执行");
     }
-    @After
+
+    @After(("Advice.pc()"))
     public void afterRunning(){
         System.out.println("后置通知，在目标方法执行后执行");
     }
