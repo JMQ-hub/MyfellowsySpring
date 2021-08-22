@@ -28,7 +28,10 @@
         <property name="car" ref="car"></property>
     </bean>
 
-    <bean>
+    <!--
+    3.复杂类型注入
+    -->
+    <bean name = "">
 
     </bean>
 
